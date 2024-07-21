@@ -1,16 +1,11 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function isPalindrome(str) {
+  const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  return cleanStr === cleanStr.split('').reverse().join('');
 }
 
-/* 
-  Add your pseudocode here
-*/
+module.exports = isPalindrome;
 
-/*
-  Add written explanation of your solution here
-*/
-
-// You can run `node index.js` to view these console logs
+// You can run node index.js to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
